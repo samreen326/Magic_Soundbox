@@ -22,7 +22,7 @@ An interactive fantasy spell-casting game built with HTML, CSS, and JavaScript.
 
 ## Live Demo
 
-(Add your GitHub Pages link here)
+https://samreen326.github.io/Magic_Soundbox/
 
 ## Author
 
