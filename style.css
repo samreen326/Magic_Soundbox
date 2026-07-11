@@ -5,7 +5,6 @@
 }
 
 body{
-    overflow:hidden;
     font-family:'Poppins',sans-serif;
     background:
         radial-gradient(circle at top,#31204b 0%,#1b1330 40%,#0d0918 100%);
@@ -598,4 +597,12 @@ grid-template-columns:repeat(2,1fr);
 width:180px;
 }
 
+}
+footer{
+    text-align:center;
+    padding:25px;
+    color:#ffe89c;
+    font-family:'Cinzel', serif;
+    opacity:0.8;
+    text-shadow:0 0 8px gold;
 }
