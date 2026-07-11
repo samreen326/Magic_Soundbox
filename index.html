@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Enchanted Desk ✨</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ==========================
+        INTRO SCREEN
+=========================== -->
+
+<section id="intro">
+
+    <div class="intro-card">
+
+        <h1>The Enchanted Desk</h1>
+
+        <p>
+            Welcome, Apprentice.
+            Cast magical spells, level up and become
+            the Grand Mage.
+        </p>
+
+        <button id="startBtn">
+            ✨ Begin Your Journey
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        MAIN GAME
+=========================== -->
+
+<main id="game" class="hidden">
+
+<!-- ==========================
+        HEADER
+=========================== -->
+
+<header>
+
+    <h2>The Enchanted Desk</h2>
+
+    <div class="controls">
+
+        <button id="themeToggle" title="Theme">
+            🌙
+        </button>
+
+        <button id="muteBtn" title="Mute">
+            🔊
+        </button>
+
+    </div>
+
+</header>
+
+<!-- ==========================
+        MAGICAL DESK
+=========================== -->
+
+<section id="desk">
+
+    <!-- LEFT -->
+
+    <aside class="side">
+
+        <div class="magic-item" id="crystal">
+            🔮
+        </div>
+
+        <div class="magic-item" id="candle">
+            🕯️
+        </div>
+
+    </aside>
+
+    <!-- SPELLBOOK -->
+
+    <section id="spellbook">
+
+        <h2>Spellbook</h2>
+
+        <div id="spellGrid">
+
+            <button class="spell" data-spell="fire">
+                🔥
+                <span>Fireball</span>
+            </button>
+
+            <button class="spell" data-spell="ice">
+                ❄
+                <span>Blast</span>
+            </button>
+
+            <button class="spell" data-spell="lightning">
+                ⚡
+                <span>Lightning</span>
+            </button>
+
+            <button class="spell" data-spell="nature">
+                🌿
+                <span>Nature</span>
+            </button>
+
+            <button class="spell" data-spell="wind">
+                🌪
+                <span>Wind</span>
+            </button>
+
+            <button class="spell" data-spell="heal">
+                💖
+                <span>Heal</span>
+            </button>
+
+            <button class="spell" data-spell="moon">
+                🌙
+                <span>Moonbeam</span>
+            </button>
+
+            <button class="spell" data-spell="meteor">
+                ☄
+                <span>Meteor</span>
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- RIGHT -->
+
+    <aside class="side">
+
+        <div class="magic-item" id="dragon">
+            🐉
+        </div>
+
+        <div class="magic-item" id="potion">
+            🧪
+        </div>
+
+    </aside>
+
+</section>
+
+<!-- ==========================
+        PLAYER STATS
+=========================== -->
+
+<section id="stats">
+
+    <div class="stat">
+
+        <label>Mana</label>
+
+        <div class="bar">
+
+            <div id="manaFill"></div>
+
+        </div>
+
+    </div>
+
+    <div class="stat">
+
+        <label>XP</label>
+
+        <div class="bar">
+
+            <div id="xpFill"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        SPELL HISTORY
+=========================== -->
+
+<section id="history">
+
+    <h3>Recent Spells</h3>
+
+    <ul id="historyList"></ul>
+
+</section>
+
+<!-- ==========================
+        ACHIEVEMENT POPUP
+=========================== -->
+
+<div id="achievement">
+
+🏆 Achievement Unlocked!
+
+</div>
+
+<!-- ==========================
+        SECRET ENDING
+=========================== -->
+
+<section id="ending">
+
+    <h1>✨ GRAND MAGE ✨</h1>
+
+    <p>
+        You have mastered every spell.
+    </p>
+
+    <button onclick="location.reload()">
+        Play Again
+    </button>
+
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

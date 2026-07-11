@@ -1,0 +1,601 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+    background:
+        radial-gradient(circle at top,#31204b 0%,#1b1330 40%,#0d0918 100%);
+    color:white;
+}
+
+/* ===========================
+   INTRO SCREEN
+=========================== */
+
+#intro{
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    gap:25px;
+
+    background:
+    radial-gradient(circle,#40295e,#100a1f);
+
+    z-index:999;
+}
+
+#intro h1{
+
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+    color:#ffe89c;
+
+    text-shadow:
+    0 0 10px gold,
+    0 0 25px gold;
+}
+
+#intro p{
+
+    font-size:1.2rem;
+    opacity:.8;
+}
+
+#startBtn{
+
+    padding:18px 40px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:
+    linear-gradient(45deg,#ffdd77,#ffb347);
+
+    color:#2b1b08;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.35s;
+}
+
+#startBtn:hover{
+
+    transform:
+    scale(1.08);
+
+    box-shadow:
+    0 0 30px gold;
+}
+
+/* ===========================
+   GAME
+=========================== */
+
+.hidden{
+
+    display:none;
+}
+
+#game{
+
+    width:100vw;
+    height:100vh;
+
+    position:relative;
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+#background{
+
+    position:absolute;
+    inset:0;
+    z-index:-2;
+}
+
+.stars{
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+    radial-gradient(white 1px,transparent 1px);
+
+    background-size:60px 60px;
+
+    opacity:.55;
+
+    animation:
+    twinkle 5s infinite alternate;
+}
+
+.sparkles{
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+    radial-gradient(#ffe889 1px,transparent 1px);
+
+    background-size:120px 120px;
+
+    opacity:.4;
+
+    animation:
+    floatStars 18s linear infinite;
+}
+
+.clouds{
+
+    position:absolute;
+
+    width:200%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+    transparent,
+    rgba(255,255,255,.03));
+
+    animation:
+    drift 45s linear infinite;
+}
+
+@keyframes drift{
+
+from{
+transform:translateX(0);
+}
+
+to{
+transform:translateX(-30%);
+}
+
+}
+
+@keyframes twinkle{
+
+from{
+opacity:.3;
+}
+
+to{
+opacity:.75;
+}
+
+}
+
+@keyframes floatStars{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-60px);
+}
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+
+    width:90%;
+
+    margin:auto;
+
+    padding:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+header h2{
+
+    font-family:'Cinzel',serif;
+
+    color:#ffe89c;
+}
+
+.controls{
+
+    display:flex;
+
+    gap:15px;
+}
+
+.controls button{
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ffffff18;
+
+    color:white;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(8px);
+
+    transition:.3s;
+}
+
+.controls button:hover{
+
+    transform:rotate(15deg) scale(1.1);
+
+    background:#ffffff30;
+}
+
+/* ===========================
+   DESK
+=========================== */
+
+#desk{
+
+    width:90%;
+
+    height:60vh;
+
+    margin:auto;
+
+    margin-top:10px;
+
+    display:grid;
+
+    grid-template-columns:220px 1fr 220px;
+
+    gap:40px;
+
+    align-items:center;
+}
+
+/* Side Items */
+
+.left-items,
+.right-items{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:35px;
+
+    align-items:center;
+
+    font-size:65px;
+}
+
+#dragon{
+
+    animation:
+    dragonFloat 3s ease-in-out infinite;
+}
+
+@keyframes dragonFloat{
+
+0%,100%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+#candle{
+
+    animation:
+    flicker .18s infinite alternate;
+}
+
+@keyframes flicker{
+
+from{
+
+filter:drop-shadow(0 0 8px orange);
+
+}
+
+to{
+
+filter:drop-shadow(0 0 18px gold);
+
+}
+
+}
+
+/* ===========================
+   SPELLBOOK
+=========================== */
+
+#spellbook{
+
+    background:
+    linear-gradient(#f5ecd2,#e9d7a5);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    color:#2c1d12;
+
+    box-shadow:
+
+    0 20px 70px rgba(0,0,0,.45);
+
+    position:relative;
+}
+
+#spellbook::before{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+top:0;
+
+bottom:0;
+
+width:4px;
+
+background:#b98d49;
+}
+
+#spellbook h2{
+
+text-align:center;
+
+margin-bottom:30px;
+
+font-family:'Cinzel',serif;
+}
+
+#spellGrid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+}
+
+.spell{
+
+padding:18px;
+
+border:none;
+
+border-radius:18px;
+
+background:white;
+
+cursor:pointer;
+
+font-weight:600;
+
+transition:.35s;
+}
+
+.spell:hover{
+
+transform:
+translateY(-8px)
+scale(1.03);
+
+box-shadow:
+
+0 12px 25px rgba(0,0,0,.25);
+
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+#stats{
+
+width:90%;
+
+margin:25px auto;
+
+display:flex;
+
+gap:50px;
+}
+
+.bar{
+
+width:260px;
+
+height:16px;
+
+background:#ffffff25;
+
+border-radius:20px;
+
+overflow:hidden;
+}
+
+#manaFill{
+
+height:100%;
+
+width:100%;
+
+background:
+
+linear-gradient(90deg,#00e5ff,#66ffff);
+
+transition:.5s;
+}
+
+#xpFill{
+
+height:100%;
+
+width:0;
+
+background:
+
+linear-gradient(90deg,#ffe066,#ffb703);
+
+transition:.5s;
+}
+
+/* ===========================
+   HISTORY
+=========================== */
+
+#history{
+
+width:90%;
+
+margin:auto;
+
+padding:20px;
+
+background:#ffffff10;
+
+border-radius:20px;
+
+backdrop-filter:blur(10px);
+}
+
+#history ul{
+
+margin-top:10px;
+
+padding-left:20px;
+}
+
+/* ===========================
+   ACHIEVEMENT
+=========================== */
+
+#achievement{
+
+position:fixed;
+
+top:25px;
+
+right:-400px;
+
+background:#ffd84d;
+
+color:#3b2400;
+
+padding:20px 30px;
+
+border-radius:18px;
+
+font-weight:bold;
+
+transition:.5s;
+}
+
+/* ===========================
+   SECRET ENDING
+=========================== */
+
+#ending{
+
+position:fixed;
+
+inset:0;
+
+background:#12091f;
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+text-align:center;
+
+z-index:9999;
+}
+
+#ending h1{
+
+font-size:5rem;
+
+font-family:'Cinzel',serif;
+
+color:#ffe77b;
+
+text-shadow:
+
+0 0 25px gold;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+#desk{
+
+grid-template-columns:1fr;
+
+height:auto;
+}
+
+.left-items,
+.right-items{
+
+flex-direction:row;
+
+justify-content:center;
+
+font-size:50px;
+}
+
+#spellGrid{
+
+grid-template-columns:repeat(2,1fr);
+}
+
+.bar{
+
+width:180px;
+}
+
+}
